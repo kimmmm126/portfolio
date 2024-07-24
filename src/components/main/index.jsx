@@ -1,12 +1,12 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { infoList, infoTxtList } from '../../constants/constantsData.js'
-
+import { infoList, infoTxtList, btnList } from '../../constants/constantsData.js'
+import Menus from "../../components/menus";
+import Contents from '../../components/contents';
 
 const Main = ({ img }) => {
 
   const location = useLocation();
-
 
   return (
     <main className={location.pathname === '/' ? 'main' : 'sub'}>
@@ -39,12 +39,23 @@ const Main = ({ img }) => {
         </div>
         <div className="infoTxtWrap">
           {infoTxtList.map(item => (
-            <p className={'txt ' + (item.idx === 1 ? 'bold' : item.idx === 3 ? 'ico' : '')} key={item.idx}>
+            <p className={'txt ' + (item.idx === 1 ? 'bold' : item.idx === 3 ? 'icon' : '')} key={item.idx}>
               {item.text}
             </p>
           ))}
         </div>
-        <hr className="divider" />
+      </section>
+      <hr className="divider" />
+      <section className="contents">
+        <div className="topMenu">
+          <Menus menuList={btnList} />
+        </div>
+        <div className="contentsWrap">
+          <Contents />
+        </div>
+        <div className="bottomMenu">
+          <Menus menuList={btnList} />
+        </div>
       </section>
     </main>
   );

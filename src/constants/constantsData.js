@@ -32,4 +32,23 @@ const infoTxtList = [
 
 ]
 
-export { infoList, infoTxtList } 
+const btnList = [
+  {
+    idx: 1,
+    name: 'total'
+  },
+  {
+    idx: 2,
+    name: 'web'
+  },
+  {
+    idx: 3,
+    name: 'app'
+  },
+  {
+    idx: 4,
+    name: 'design'
+  }
+]
+
+export { infoList, infoTxtList, btnList } 
