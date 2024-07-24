@@ -1,0 +1,265 @@
+@import '_reset.scss';
+@import '_font.scss';
+@import '_variables.scss';
+
+/* 공통 버튼 */
+.btn {
+  font-size: 1em;
+  box-sizing: border-box;
+  border: none;
+  color: transparent;
+  text-shadow: 0 0 #222;
+  background-color: $bgColorGray;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+  border-radius: 0;
+
+  &:focus {
+    outline: 1px dotted #000;
+    outline-offset: -4px;
+  }
+
+  &:not(:disabled):active {
+    box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
+    text-shadow: 1px 1px #222;
+  }
+
+  &:last-child {
+    margin-right: 0 !important
+  }
+
+  &.icon {
+    width: 20px;
+    height: 20px;
+    text-indent: -999999px;
+  }
+}
+
+.arrow {
+  display: inline-block;
+  border: 0.4em solid transparent;
+  margin-bottom: -0.25em;
+
+  &.bottom {
+    border-top-color: #000;
+  }
+}
+
+.wrap {
+  background-color: $bgColorGreen;
+  min-height: 100vh;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 5% 0
+}
+
+.container {
+  min-width: 360px;
+  width: 480px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 4px;
+  overflow: hidden;
+  text-shadow: 0 0 #222;
+  background-color: $bgColorGray;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+}
+
+header {
+  .headerContanier {
+    position: relative;
+  }
+
+  .headerTitle {
+    position: relative;
+    background-color: #00017f;
+    color: #fff;
+    font-size: $h4;
+    padding: 6px 10px;
+    font-weight: 300;
+    margin-bottom: 10px;
+
+    .logoWrap {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .logo {
+      width: 20px;
+      height: 20px;
+    }
+
+    h2 {
+      font-size: inherit;
+      font-weight: inherit;
+      padding-left: $logoWidth + 5px;
+    }
+  }
+
+  nav {
+    margin: 0 10px;
+
+    ul {
+      display: flex;
+
+      li {
+        text-align: center;
+        font-size: 0.9em;
+        margin-right: 10px;
+        cursor: pointer;
+
+        &:last-child {
+          margin: 0
+        }
+
+        span {
+          display: inline-block;
+
+          &::after {
+            content: '';
+            display: block;
+            color: inherit;
+            margin: 1px 0;
+            width: 0.7em;
+            height: 1px;
+            background-color: #000;
+          }
+        }
+      }
+    }
+  }
+
+  .btnWrap {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+
+    .btn {
+      margin-right: 3px;
+    }
+  }
+
+}
+
+.main {
+  min-height: 100%;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+.sub {
+  
+}
+
+.subHeaderTilte {
+  text-align: center;
+  font-size: $h2;
+  font-weight: 300;
+  margin: 20px 0;
+}
+
+.infoBox {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile {
+  position: relative;
+  width: $profileImgSize;
+  overflow: hidden;
+  background-color: #000;
+  border-radius: 100px;
+
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  .profileImg {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    height: 100%;
+    transform: translateY(-50%);
+  }
+}
+
+.avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: center / cover url('../assets/images/profile.gif') no-repeat;
+}
+
+.infoWrap {
+  width: calc(100% - $profileImgSize);
+  padding-left: 15px;
+
+  .infoList {
+    width: 100%;
+
+    ul {
+      display: flex;
+
+      li {
+        width: 33.3%;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .tit {
+          display: block;
+          font-style: normal;
+          margin: 5px 0;
+        }
+
+        .count {
+          display: block;
+          font-size: 1.4em;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .btnWrap {
+    display: flex;
+    margin-top: 10px;
+
+    .btn {
+      height: 40px;
+      margin-right: 5px;
+
+      &.follow {
+        width: calc(100% - 40px);
+
+        span {
+          position: relative;
+          padding-left: 1em;
+
+          &:before {
+            display: block;
+            content: '+';
+            position: absolute;
+            top: 6px;
+            left: 0;
+            line-height: 0;
+          }
+        }
+      }
+
+      &.dropdown {
+        width: 40px;
+      }
+    }
+
+
+  }
+}
