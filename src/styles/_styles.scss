@@ -34,6 +34,11 @@
   }
 }
 
+/* 공통 디바이더 */
+.divider {
+  width: 100%;
+}
+
 .arrow {
   display: inline-block;
   border: 0.4em solid transparent;
@@ -148,9 +153,7 @@ header {
   padding: 0 10px;
 }
 
-.sub {
-  
-}
+.sub {}
 
 .subHeaderTilte {
   text-align: center;
@@ -162,6 +165,7 @@ header {
 .infoBox {
   margin: 20px 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -198,7 +202,7 @@ header {
 }
 
 .infoWrap {
-  width: calc(100% - $profileImgSize);
+  width: 100% - $profileImgSize;
   padding-left: 15px;
 
   .infoList {
@@ -218,11 +222,12 @@ header {
           display: block;
           font-style: normal;
           margin: 5px 0;
+          font-size: $h4;
         }
 
         .count {
           display: block;
-          font-size: 1.4em;
+          font-size: $h2;
           font-weight: 600;
         }
       }
@@ -231,7 +236,7 @@ header {
 
   .btnWrap {
     display: flex;
-    margin-top: 10px;
+    margin-top: 6%;
 
     .btn {
       height: 40px;
@@ -261,5 +266,39 @@ header {
     }
 
 
+  }
+}
+
+.infoTxtWrap {
+  flex: 1;
+  margin: 40px 0 10px;
+
+  .txt {
+    margin-bottom: 10px;
+
+    &.bold {
+      font-weight: 700;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.ico {
+      position: relative;
+      padding-left: $iconSize + 5px;
+
+      &::before {
+        content: '';
+        display: 'block';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: $iconSize;
+        height: $iconSize;
+        transform: translateY(-50%);
+        background: center / cover url('../assets/images/github-ico.png') no-repeat;
+      }
+    }
   }
 }

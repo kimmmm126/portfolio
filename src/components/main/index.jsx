@@ -1,32 +1,16 @@
 import React from "react";
-import { useLocation } from "react-router-dom"
-
-const infoList = [
-  {
-    idx : 1,
-    title : 'Posts',
-    count : 1000,
-  },
-  {
-    idx : 2,
-    title : 'Posts',
-    count : 1000,
-  },
-  {
-    idx : 3,
-    title : 'Posts',
-    count : 1000,
-  }
-]
+import { useLocation } from "react-router-dom";
+import { infoList, infoTxtList } from '../../constants/constantsData.js'
 
 
 const Main = ({ img }) => {
 
   const location = useLocation();
 
+
   return (
     <main className={location.pathname === '/' ? 'main' : 'sub'}>
-      <section>
+      <section className="infoHeader">
         <h2 className="subHeaderTilte">Porfolio</h2>
         <hr className="divider" />
       </section>
@@ -43,7 +27,7 @@ const Main = ({ img }) => {
               {infoList.map(item => (
                 <li key={item.idx}>
                   <em className="tit">{item.title}</em>
-                  <span className="count">{item.count}</span>
+                  <span className="count">{item.count.toLocaleString()}</span>
                 </li>
               ))}
             </ul>
@@ -53,6 +37,14 @@ const Main = ({ img }) => {
             <button className="btn dropdown"><span className="arrow bottom" /></button>
           </div>
         </div>
+        <div className="infoTxtWrap">
+          {infoTxtList.map(item => (
+            <p className={'txt ' + (item.idx === 1 ? 'bold' : item.idx === 3 ? 'ico' : '')} key={item.idx}>
+              {item.text}
+            </p>
+          ))}
+        </div>
+        <hr className="divider" />
       </section>
     </main>
   );
