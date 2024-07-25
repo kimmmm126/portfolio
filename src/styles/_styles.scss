@@ -1,3 +1,4 @@
+@import '_variables.scss';
 @import '_reset.scss';
 @import '_font.scss';
 
@@ -48,24 +49,24 @@
     }
   }
 
-  /* 전체 보기 버튼 */
+/* 전체 보기 버튼 */
   &.total {
     &:before {
-      background: center / contain url('../assets/images/total-img.png') no-repeat;
+      background: center / contain url('../assets/images/total-ico-img.png') no-repeat;
     }
   }
 
   /* 소개 버튼 */
   &.info {
     &::before {
-      background: center / contain url('../assets/images/info-img.png') no-repeat;
+      background: center / 75% url('../assets/images/info-ico-img.png') no-repeat;
     }
   }
 
   /* 좋아요 버튼 */
   &.like {
     &::before {
-      background: center / contain url('../assets/images/like-img.png') no-repeat;
+      background: center / contain url('../assets/images/like-ico-img.png') no-repeat;
     }
   }
 }
@@ -310,6 +311,7 @@
   margin: 20px 0 0;
 
   .txt {
+    font-size: $h4;
     margin-bottom: 10px;
 
     &.bold {
@@ -320,22 +322,6 @@
       margin-bottom: 0;
     }
 
-    &.icon {
-      position: relative;
-      padding-left: $iconSize + 5px;
-
-      &::before {
-        content: '';
-        display: 'block';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        width: $iconSize;
-        height: $iconSize;
-        transform: translateY(-50%);
-        background: center / cover url('../assets/images/github-ico.png') no-repeat;
-      }
-    }
   }
 }
 

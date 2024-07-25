@@ -1,5 +1,3 @@
-@import '_variables.scss';
-
 *,
 *::before,
 *::after {
@@ -13,8 +11,7 @@ body {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   -webkit-font-smoothing: none;
-  font-family: "w95fa", Arial;
-  font-weight: 400;
+  font-family: "MS-Sans-Serif", Arial;
   margin: 0;
   padding: 0;
   background-color: $bgColorGreen;
@@ -62,4 +59,8 @@ button {
   padding: 0;
   overflow: visible;
   cursor: pointer
+}
+
+body::-webkit-scrollbar-thumb {
+
 }

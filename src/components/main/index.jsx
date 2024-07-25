@@ -36,7 +36,7 @@ const Main = ({ img }) => {
         </div>
         <div className="infoTxtWrap">
           {infoTxtList.map(item => (
-            <p className={'txt ' + (item.idx === 1 ? 'bold' : item.idx === 3 ? 'icon' : '')} key={item.idx}>
+            <p className={'txt' + (item.idx === 1 ? ' bold' : '')} key={item.idx}>
               {item.text}
             </p>
           ))}
