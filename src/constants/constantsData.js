@@ -2,12 +2,12 @@ const infoList = [
   {
     idx: 1,
     title: 'Posts',
-    count: 1000,
+    count: 0,
   },
   {
     idx: 2,
     title: 'followers',
-    count: 1000,
+    count: 230000,
   },
   {
     idx: 3,

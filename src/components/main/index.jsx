@@ -4,7 +4,6 @@ import Menus from "../../components/menus";
 import Contents from '../../components/contents';
 
 const Main = ({ img }) => {
-
   return (
     <main className="container">
       <div className="infoHeader">
@@ -21,12 +20,17 @@ const Main = ({ img }) => {
         <div className="infoWrap">
           <div className="infoList">
             <ul>
-              {infoList.map(item => (
-                <li key={item.idx}>
-                  <em className="tit">{item.title}</em>
-                  <span className="count">{item.count.toLocaleString()}</span>
-                </li>
-              ))}
+              {infoList.map(item => {
+                const count = Math.floor(item.count / 1000);
+                return (
+                  <li key={item.idx}>
+                    <em className="tit">{item.title}</em>
+                    <span className="count">
+                      {count.toLocaleString() + 'k'}
+                    </span>
+                  </li>
+                )
+              })}
             </ul>
           </div>
           <div className="btnWrap">
@@ -47,7 +51,7 @@ const Main = ({ img }) => {
         <div className="topMenu">
           <Menus menuList={topMenuList} />
         </div>
-        <Contents contentsList={topMenuList} />
+        <Contents />
         <div className="bottomMenu">
           <Menus menuList={bottomMenuList} />
         </div>

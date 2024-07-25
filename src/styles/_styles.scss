@@ -195,7 +195,6 @@
 }
 
 .container {
-  height: fit-content;
   padding: 10px;
 }
 
@@ -287,12 +286,13 @@
 
   .btnWrap {
     display: flex;
-    margin-top: 6%;
+    margin-top: 5%;
 
     .btn {
       width: 40px;
       height: 40px;
       margin-right: 5px;
+      font-size: $h5;
 
       &.follow {
         width: calc(100% - 40px);
@@ -328,25 +328,28 @@
 }
 
 .contents {
-  overflow-y: auto;
-
   img {
     width: 33.3%;
   }
 
   .contentsBox {
+    position: relative;
     overflow-y: auto;
+    min-height: 200px;
     max-height: 200px;
   }
-}
 
-.noContents {
-  display: block;
-  width: 100%;
-  text-align: center;
-  margin: 50px 0;
+  .noContents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 100%;
+    text-align: center;
 
-  p {
-    font-size: $h4;
+    p {
+      font-size: $h4;
+    }
   }
 }

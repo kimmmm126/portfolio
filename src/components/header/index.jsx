@@ -1,6 +1,6 @@
 import React from "react"
 import { CloseIcon, MaxIcon, MinIcon } from '../../assets/svg'
-import Logo from "../../assets/images/logo.png"
+import Logo from "../../assets/images/logo.svg"
 
 const Header = () => {
   return (
