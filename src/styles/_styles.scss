@@ -200,13 +200,15 @@
 
 .infoHeader {
   margin-bottom: 20px;
+
+  .title {
+    text-align: center;
+    font-size: $h3;
+    font-weight: 300;
+  }
 }
 
-.infoHeaderTitle {
-  text-align: center;
-  font-size: $h2;
-  font-weight: 300;
-}
+
 
 .infoBox {
   margin: 20px 0;

@@ -7,7 +7,7 @@ const Main = ({ img }) => {
   return (
     <main className="container">
       <div className="infoHeader">
-        <h2 className="infoHeaderTitle">Porfolio</h2>
+        <h2 className="title">Porfolio</h2>
       </div>
       <hr className="divider" />
       <section className="infoBox">
