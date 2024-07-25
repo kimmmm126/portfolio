@@ -9,7 +9,7 @@ import './styles/_styles.scss';
 function App() {
   return (
     <div className="wrap">
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
