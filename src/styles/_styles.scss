@@ -27,6 +27,11 @@
     margin-right: 0 !important
   }
 
+  &.sm {
+    width: 20px;
+    height: 20px;
+  }
+
   &.icon {
     width: 20px;
     height: 20px;
@@ -49,7 +54,7 @@
     }
   }
 
-/* 전체 보기 버튼 */
+  /* 전체 보기 버튼 */
   &.total {
     &:before {
       background: center / contain url('../assets/images/total-ico-img.png') no-repeat;
@@ -76,13 +81,23 @@
   width: 100%;
 }
 
+/* 화살표 */
 .arrow {
-  display: inline-block;
-  border: 0.4em solid transparent;
-  margin-bottom: -0.25em;
+  position: relative;
+  text-indent: -99999px;
 
   &.bottom {
-    border-top-color: #000;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: inline-block;
+      border: 0.4em solid transparent;
+      border-top-color: #000;
+      border-bottom-width: 0;
+    }
   }
 }
 
@@ -92,6 +107,7 @@
   top: 50%;
   min-width: 360px;
   width: 480px;
+  min-height: 700px;
   padding: 4px;
   text-shadow: 0 0 #222;
   transform: translate(-50%, -50%);
@@ -105,20 +121,12 @@
   }
 
   .title {
-    position: relative;
-    background-color: #00017f;
-    color: #fff;
+    display: flex;
+    align-items: center;
     font-size: $h4;
+    color: $colorWhite;
     padding: 6px 10px;
-    font-weight: 300;
-    margin-bottom: 10px;
-
-    .logoWrap {
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+    background-color: $windowBgColor;
 
     .logo {
       width: 20px;
@@ -128,7 +136,7 @@
     h2 {
       font-size: inherit;
       font-weight: inherit;
-      padding-left: $logoWidth + 5px;
+      padding-left: 5px;
     }
   }
 
@@ -169,11 +177,17 @@
   }
 
   .btnWrap {
+    display: flex;
     position: absolute;
-    top: 3px;
-    right: 3px;
+    top: 0;
+    right: 0;
+    padding: 6px 10px;
 
     .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0;
       margin-right: 3px;
     }
   }
@@ -276,33 +290,14 @@
     margin-top: 6%;
 
     .btn {
+      width: 40px;
       height: 40px;
       margin-right: 5px;
 
       &.follow {
         width: calc(100% - 40px);
-
-        span {
-          position: relative;
-          padding-left: 1em;
-
-          &:before {
-            display: block;
-            content: '+';
-            position: absolute;
-            top: 6px;
-            left: 0;
-            line-height: 0;
-          }
-        }
-      }
-
-      &.dropdown {
-        width: 40px;
       }
     }
-
-
   }
 }
 

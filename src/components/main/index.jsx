@@ -30,8 +30,8 @@ const Main = ({ img }) => {
             </ul>
           </div>
           <div className="btnWrap">
-            <button className="btn follow"><span>Follow</span></button>
-            <button className="btn dropdown"><span className="arrow bottom" /></button>
+            <button className="btn follow">Follow +</button>
+            <button className="btn arrow bottom">Drop Down</button>
           </div>
         </div>
         <div className="infoTxtWrap">
