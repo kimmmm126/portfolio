@@ -32,7 +32,7 @@ const infoTxtList = [
 
 ]
 
-const btnList = [
+const topMenuList = [
   {
     idx: 1,
     name: 'total'
@@ -51,4 +51,23 @@ const btnList = [
   }
 ]
 
-export { infoList, infoTxtList, btnList } 
+const bottomMenuList = [
+  {
+    id: 1,
+    name: 'intro'
+  },
+  {
+    id: 2,
+    name: 'skils'
+  },
+  {
+    id: 3,
+    name: 'info'
+  },
+  {
+    id: 4,
+    name: 'like'
+  },
+]
+
+export { infoList, infoTxtList, topMenuList, bottomMenuList } 

@@ -1,5 +1,5 @@
 import React from "react";
-import { infoList, infoTxtList, btnList } from '../../constants/constantsData.js'
+import { infoList, infoTxtList, topMenuList, bottomMenuList } from '../../constants/constantsData.js'
 import Menus from "../../components/menus";
 import Contents from '../../components/contents';
 
@@ -45,11 +45,11 @@ const Main = ({ img }) => {
       <hr className="divider" />
       <section className="contents">
         <div className="topMenu">
-          <Menus menuList={btnList} />
+          <Menus menuList={topMenuList} />
         </div>
         <Contents />
         <div className="bottomMenu">
-          <Menus menuList={btnList} />
+          <Menus menuList={bottomMenuList} />
         </div>
       </section>
     </main >

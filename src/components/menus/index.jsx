@@ -3,7 +3,7 @@ import React from "react";
 const Menus = ({ menuList }) => {
   return (
     <div className='menus'>
-      {menuList.map((menu) => <button key={menu.idx} className={'btn icon ' + menu.name}>{menu.name}</button>)}
+      {menuList.map((menu) => <button key={menu.name} className={'btn icon2 ' + menu.name}>{menu.name}</button>)}
     </div >
   )
 }
