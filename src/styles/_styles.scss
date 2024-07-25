@@ -55,6 +55,13 @@
     }
   }
 
+  /* 소개 버튼 */
+  &.info {
+    &::before {
+      background: center / contain url('../assets/images/info-img.png') no-repeat;
+    }
+  }
+
   /* 좋아요 버튼 */
   &.like {
     &::before {
@@ -349,5 +356,16 @@
   .contentsBox {
     overflow-y: auto;
     max-height: 200px;
+  }
+}
+
+.noContents {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 50px 0;
+
+  p {
+    font-size: $h4;
   }
 }

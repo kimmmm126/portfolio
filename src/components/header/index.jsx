@@ -11,7 +11,7 @@ const Header = () => {
           <div className="logoWrap">
             <img className="logo" src={Logo} alt="인스타그램" />
           </div>
-          <h2>Instagram.exe</h2>
+          <h2>portfolio.exe</h2>
         </div>
         <div className="gnb">
           <nav>

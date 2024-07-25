@@ -47,7 +47,7 @@ const Main = ({ img }) => {
         <div className="topMenu">
           <Menus menuList={topMenuList} />
         </div>
-        <Contents />
+        <Contents contentsList={topMenuList} />
         <div className="bottomMenu">
           <Menus menuList={bottomMenuList} />
         </div>
