@@ -1,8 +1,10 @@
 import React from "react"
+import { useNavigate } from "react-router-dom"
 import { CloseIcon, MaxIcon, MinIcon } from '../../assets/svg'
 import Logo from "../../assets/images/logo.svg"
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <header id="header" className="header">
       <div className="headerContanier">
