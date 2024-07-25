@@ -5,22 +5,24 @@ import Logo from "../../assets/images/logo.png"
 const Header = () => {
   const navigate = useNavigate()
   return (
-    <header>
+    <header id="header" className="header">
       <div className="headerContanier">
-        <div className="headerTitle">
+        <div className="title">
           <div className="logoWrap">
             <img className="logo" src={Logo} alt="인스타그램" />
           </div>
           <h2>Instagram.exe</h2>
         </div>
-        <nav>
-          <ul>
-            <li onClick={() => navigate('/')}><span>Home</span></li>
-            <li onClick={() => navigate('/file')}><span>File</span></li>
-            <li><span>View</span></li>
-            <li><span>Contact</span></li>
-          </ul>
-        </nav>
+        <div className="gnb">
+          <nav>
+            <ul>
+              <li onClick={() => navigate('/')}><span>Home</span></li>
+              <li onClick={() => navigate('/file')}><span>File</span></li>
+              <li><span>View</span></li>
+              <li><span>Contact</span></li>
+            </ul>
+          </nav>
+        </div>
         <div className="btnWrap">
           <button className="btn icon windowDown">아래로</button>
           <button className="btn icon windowScale">창크게</button>

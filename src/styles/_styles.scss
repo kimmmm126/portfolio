@@ -1,6 +1,5 @@
 @import '_reset.scss';
 @import '_font.scss';
-@import '_variables.scss';
 
 /* 공통 버튼 */
 .btn {
@@ -67,30 +66,24 @@
 }
 
 .wrap {
-  background-color: $bgColorGreen;
-  height: 100vh;
-  box-sizing: border-box;
-  padding: 5% 0
-}
-
-.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
   min-width: 360px;
   width: 480px;
-  height: 100%;
-  margin: 0 auto;
   padding: 4px;
-  overflow: hidden;
   text-shadow: 0 0 #222;
+  transform: translate(-50%, -50%);
   background-color: $bgColorGray;
-  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+  box-shadow: $boxShadow;
 }
 
-header {
+.header {
   .headerContanier {
     position: relative;
   }
 
-  .headerTitle {
+  .title {
     position: relative;
     background-color: #00017f;
     color: #fff;
@@ -118,37 +111,40 @@ header {
     }
   }
 
-  nav {
-    margin: 0 10px;
+  .gnb {
+    margin: 10px;
 
-    ul {
-      display: flex;
+    nav {
+      ul {
+        display: flex;
 
-      li {
-        text-align: center;
-        font-size: 0.9em;
-        margin-right: 10px;
-        cursor: pointer;
+        li {
+          text-align: center;
+          font-size: 0.9em;
+          margin-right: 10px;
+          cursor: pointer;
 
-        &:last-child {
-          margin: 0
-        }
+          &:last-child {
+            margin: 0
+          }
 
-        span {
-          display: inline-block;
+          span {
+            display: inline-block;
 
-          &::after {
-            content: '';
-            display: block;
-            color: inherit;
-            margin: 1px 0;
-            width: 0.7em;
-            height: 1px;
-            background-color: #000;
+            &::after {
+              content: '';
+              display: block;
+              color: inherit;
+              margin: 1px 0;
+              width: 0.7em;
+              height: 1px;
+              background-color: #000;
+            }
           }
         }
       }
     }
+
   }
 
   .btnWrap {
@@ -163,25 +159,19 @@ header {
 
 }
 
-.main {
-  height: 100%;
-  overflow: hidden;
+.container {
+  height: fit-content;
   padding: 10px;
-  overflow-y: auto;
 }
 
-.sub {
-  height: 100%;
-  overflow: hidden;
-  padding: 10px;
-  overflow-y: auto;
+.infoHeader {
+  margin-bottom: 20px;
 }
 
-.subHeaderTilte {
+.infoHeaderTitle {
   text-align: center;
   font-size: $h2;
   font-weight: 300;
-  margin: 20px 0;
 }
 
 .infoBox {
@@ -206,11 +196,15 @@ header {
   }
 
   .profileImg {
-    position: absolute;
-    top: 50%;
     width: auto;
     height: 100%;
-    transform: translateY(-50%);
+
+    &.center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 
@@ -225,7 +219,7 @@ header {
 
 .infoWrap {
   width: 100% - $profileImgSize;
-  padding-left: 15px;
+  padding-left: 30px;
 
   .infoList {
     width: 100%;
@@ -338,9 +332,9 @@ header {
   img {
     width: 33.3%;
   }
-}
 
-.contentsBox {
-  overflow-y: auto;
-  max-height: 300px;
+  .contentsBox {
+    overflow-y: auto;
+    max-height: 200px;
+  }
 }

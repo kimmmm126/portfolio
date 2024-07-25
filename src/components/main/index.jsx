@@ -1,23 +1,20 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 import { infoList, infoTxtList, btnList } from '../../constants/constantsData.js'
 import Menus from "../../components/menus";
 import Contents from '../../components/contents';
 
 const Main = ({ img }) => {
 
-  const location = useLocation();
-
   return (
-    <main className={location.pathname === '/' ? 'main' : 'sub'}>
-      <section className="infoHeader">
-        <h2 className="subHeaderTilte">Porfolio</h2>
-        <hr className="divider" />
-      </section>
+    <main className="container">
+      <div className="infoHeader">
+        <h2 className="infoHeaderTitle">Porfolio</h2>
+      </div>
+      <hr className="divider" />
       <section className="infoBox">
         <div className="profile">
           {img
-            ? <img className="profileImg" src={img} alt="프로필" />
+            ? <img className="profileImg center" src={img} alt="프로필" />
             : <div className="avatar" />
           }
         </div>
@@ -50,14 +47,12 @@ const Main = ({ img }) => {
         <div className="topMenu">
           <Menus menuList={btnList} />
         </div>
-        <div className="contentsWrap">
-          <Contents />
-        </div>
+        <Contents />
         <div className="bottomMenu">
           <Menus menuList={btnList} />
         </div>
       </section>
-    </main>
+    </main >
   );
 }
 
