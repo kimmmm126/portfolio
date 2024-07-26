@@ -1,17 +1,17 @@
 const infoList = [
   {
     idx: 1,
-    title: 'Posts',
+    name: 'Posts',
     count: 1,
   },
   {
     idx: 2,
-    title: 'followers',
+    name: 'visitors',
     count: 230000,
   },
   {
     idx: 3,
-    title: 'following',
+    name: 'following',
     count: 1000,
   }
 ]
@@ -70,4 +70,19 @@ const bottomMenuList = [
   },
 ]
 
-export { infoList, infoTxtList, topMenuList, bottomMenuList } 
+const itemList = [
+  {
+    id: 1,
+    name: '이용복'
+  },
+  {
+    id: 2,
+    name: '양정인'
+  },
+  {
+    id: 3,
+    name: '이민호'
+  }
+]
+
+export { infoList, infoTxtList, topMenuList, bottomMenuList, itemList } 

@@ -7,7 +7,7 @@ const Contents = ({ contentsList }) => {
         contentsList.map((item) =>
           <img key={item.idx} src="http://placehold.it/300" alt="" />
         )
-        : <div className="noContents"><p>등록된 게시물이 없습니다.</p></div>}
+        : <div className="noContents"><p className="txt">등록된 게시물이 없습니다.</p></div>}
     </div>
   )
 }
