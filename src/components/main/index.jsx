@@ -26,7 +26,7 @@ const Main = ({ img }) => {
                   <li key={item.idx}>
                     <em className="tit">{item.title}</em>
                     <span className="count">
-                      {count.toLocaleString() + 'k'}
+                      {item.count >= 1000 ? count.toLocaleString() + 'k' : item.count}
                     </span>
                   </li>
                 )

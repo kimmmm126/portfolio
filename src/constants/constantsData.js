@@ -2,7 +2,7 @@ const infoList = [
   {
     idx: 1,
     title: 'Posts',
-    count: 0,
+    count: 1,
   },
   {
     idx: 2,
