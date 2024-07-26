@@ -2,7 +2,7 @@ import React from "react";
 
 const Contents = ({ contentsList }) => {
   return (
-    <div className="contentsBox">
+    <div className="contents">
       {contentsList ?
         contentsList.map((item) =>
           <img key={item.idx} src="http://placehold.it/300" alt="" />

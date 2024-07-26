@@ -4,6 +4,7 @@ import Menus from "../../components/menus";
 import InfoItemBox from '../../components/infoItemBox';
 import Contents from '../../components/contents';
 
+
 const Main = ({ img }) => {
 
   const [isActive, setIsActive] = useState(false);
@@ -58,7 +59,7 @@ const Main = ({ img }) => {
         </div>
       </section>
       <hr className="divider" />
-      <section className="contents">
+      <section className="infoContents">
         <div className="topMenu">
           <Menus menuList={topMenuList} />
         </div>

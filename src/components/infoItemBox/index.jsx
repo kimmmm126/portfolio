@@ -6,22 +6,22 @@ const InfoItemBox = ({ itemList }) => {
   const setting = {
     dots: false,
     infinite: false,
+    arrows: false,
     slidesToShow: 3,
-    slidesToShow: 3,
-    arrows: false
+    slidesToScroll: 1,
   };
 
   return (
     <div className="infoItem">
       {itemList ?
-        <Slider  {...setting}>
+        <Slider {...setting}>
           {
             itemList.map((item) => {
               return (
                 <div key={item.id} className="itemBox">
                   <div className="item" />
                   <div className="txt">
-                    <em className="tit">{item.name}</em>
+                    <p className="tit">{item.name}</p>
                     <p className="desc">test</p>
                   </div>
                   <button className="btn check">Check</button>
