@@ -66,21 +66,15 @@
   /* 전체 보기 버튼 */
   &.total {
     &:before {
-      background: center / contain url('../assets/images/total-ico-img.png') no-repeat;
+      background: center / 24px url('../assets/images/total.svg') no-repeat;
     }
   }
 
-  /* 소개 버튼 */
-  &.info {
-    &::before {
-      background: center / 75% url('../assets/images/info-ico-img.png') no-repeat;
-    }
-  }
 
   /* 좋아요 버튼 */
   &.like {
     &::before {
-      background: center / contain url('../assets/images/like-ico-img.png') no-repeat;
+      background: center / 24px url('../assets/images/like.svg') no-repeat;
     }
   }
 }

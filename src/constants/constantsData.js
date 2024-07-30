@@ -66,7 +66,7 @@ const bottomMenuList = [
   },
   {
     id: 4,
-    name: 'like'
+    name : 'like'
   },
 ]
 
