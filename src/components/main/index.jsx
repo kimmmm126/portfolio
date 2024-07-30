@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { infoList, infoTxtList, topMenuList, bottomMenuList, itemList } from '../../constants/constantsData.js'
+import { infoList, infoTxtList, itemList } from '../../constants/data.js'
 import Menus from "../../components/menus";
 import InfoItemBox from '../../components/infoItemBox';
 import Contents from '../../components/contents';
+import Icons from '../../constants/svg.js'
 
 
 const Main = ({ img }) => {
@@ -61,11 +62,11 @@ const Main = ({ img }) => {
       <hr className="divider" />
       <section className="infoContents">
         <div className="topMenu">
-          <Menus menuList={topMenuList} />
+          <Menus icons={Icons.slice(0,4)} />
         </div>
         <Contents />
         <div className="bottomMenu">
-          <Menus menuList={bottomMenuList} />
+          <Menus icons={Icons.slice(4,8)} />
         </div>
       </section>
     </main >

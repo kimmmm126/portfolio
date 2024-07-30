@@ -1,6 +1,5 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
-import { CloseIcon, MaxIcon, MinIcon } from '../../assets/svg'
 import Logo from "../../assets/images/logo.svg"
 
 const Header = () => {
@@ -24,13 +23,10 @@ const Header = () => {
         </div>
         <div className="btnWrap">
           <button className="btn sm min">
-            <MinIcon width={6} height={2} fill="none" />
           </button>
           <button className="btn sm max">
-            <MaxIcon width={9} height={9} fill="none" />
           </button>
           <button className="btn sm close">
-            <CloseIcon width={8} height={7} fill="#000" />
           </button>
         </div>
       </div>

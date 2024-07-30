@@ -6,25 +6,6 @@
 
 /* 공통 버튼 */
 .btn {
-  font-size: 1em;
-  box-sizing: border-box;
-  border: none;
-  color: transparent;
-  text-shadow: 0 0 #222;
-  background-color: $bgColorGray;
-  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
-  border-radius: 0;
-
-  &:focus {
-    outline: 1px dotted #000;
-    outline-offset: -4px;
-  }
-
-  &:not(:disabled):active {
-    box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
-    text-shadow: 1px 1px #222;
-  }
-
   &:last-child {
     margin-right: 0 !important
   }
@@ -40,42 +21,22 @@
     text-indent: -999999px;
   }
 
-  &.icon2 {
-    position: relative;
-    text-indent: -999999px;
-
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 20px;
-      height: 20px;
-      transform: translate(-50%, -50%);
-    }
-  }
-
   /* 체크 버튼 */
   &.check {
     width: 100%;
     height: 30px;
     font-size: $h5;
   }
+}
 
-  /* 전체 보기 버튼 */
-  &.total {
-    &:before {
-      background: center / 24px url('../assets/images/total.svg') no-repeat;
-    }
-  }
-
-
-  /* 좋아요 버튼 */
-  &.like {
-    &::before {
-      background: center / 24px url('../assets/images/like.svg') no-repeat;
-    }
+ /* 공통 아이콘 */
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  svg {
+    display: block;
+    width: 20px;
+    height: 20px;
   }
 }
 

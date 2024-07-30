@@ -32,44 +32,6 @@ const infoTxtList = [
 
 ]
 
-const topMenuList = [
-  {
-    idx: 1,
-    name: 'total'
-  },
-  {
-    idx: 2,
-    name: 'web'
-  },
-  {
-    idx: 3,
-    name: 'app'
-  },
-  {
-    idx: 4,
-    name: 'design'
-  }
-]
-
-const bottomMenuList = [
-  {
-    id: 1,
-    name: 'intro'
-  },
-  {
-    id: 2,
-    name: 'skils'
-  },
-  {
-    id: 3,
-    name: 'info'
-  },
-  {
-    id: 4,
-    name : 'like'
-  },
-]
-
 const itemList = [
   {
     id: 1,
@@ -93,4 +55,4 @@ const itemList = [
   },
 ]
 
-export { infoList, infoTxtList, topMenuList, bottomMenuList, itemList } 
+export { infoList, infoTxtList, itemList } 

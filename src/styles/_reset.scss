@@ -51,14 +51,23 @@ a {
 }
 
 button {
-  font-family: inherit;
-  background: inherit;
+  font-size: 1em;
+  box-sizing: border-box;
   border: none;
-  box-shadow: none;
+  color: transparent;
+  text-shadow: 0 0 #222;
+  background-color: $bgColorGray;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
   border-radius: 0;
-  padding: 0;
-  overflow: visible;
-  cursor: pointer
+  &:focus {
+    outline: 1px dotted #000;
+    outline-offset: -4px;
+  }
+
+  &:not(:disabled):active {
+    box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
+    text-shadow: 1px 1px #222;
+  }
 }
 
 ::-webkit-scrollbar {
