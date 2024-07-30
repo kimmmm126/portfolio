@@ -36,7 +36,16 @@
   svg {
     display: block;
     width: 20px;
-    height: 20px;
+  }
+  &.photo {
+    svg {
+      width: 25px;
+    }
+  }
+  &.skills {
+    svg {
+      width: 23px;
+    }
   }
 }
 

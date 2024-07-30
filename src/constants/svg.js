@@ -1,20 +1,23 @@
 import { ReactComponent as HomeIcon } from '../assets/images/ico-home.svg';
+import { ReactComponent as MenuIcon } from '../assets/images/ico-menu.svg';
 import { ReactComponent as InfoIcon } from '../assets/images/ico-info.svg';
+import { ReactComponent as SkillIcon } from '../assets/images/ico-skills.svg';
 import { ReactComponent as DesignIcon } from '../assets/images/ico-design.svg';
 import { ReactComponent as MapIcon } from '../assets/images/ico-map.svg';
-import { ReactComponent as LikeIcon } from '../assets/images/ico-like.svg'
+import { ReactComponent as LikeIcon } from '../assets/images/ico-like.svg';
+import { ReactComponent as PhotoIcon } from '../assets/images/ico-photo.svg'
 
 const SvgIcons = [
   {
     name: "home",
     icon: () => {
-      return <HomeIcon />
+      return <MenuIcon />
     },
   },
   {
-    name: "info",
+    name: "skills",
     icon: () => {
-      return <InfoIcon />
+      return <SkillIcon />
     },
   },
   {
@@ -36,15 +39,15 @@ const SvgIcons = [
     },
   },
   {
-    name: "info",
+    name: "photo",
     icon: () => {
-      return <InfoIcon />
+      return <PhotoIcon />
     },
   },
   {
-    name: "design",
+    name: "info",
     icon: () => {
-      return <DesignIcon />
+      return <InfoIcon />
     },
   },
   {
