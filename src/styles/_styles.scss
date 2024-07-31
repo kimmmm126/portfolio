@@ -16,15 +16,31 @@
   }
 
   &.icon {
-    width: 20px;
-    height: 20px;
+    position: relative;
     text-indent: -999999px;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    &.photo {
+      &::before {
+        width: 26px;
+        height: inherit;
+        background: center / contain url('../assets/images/ico-photo.png') no-repeat;
+      }
+    }
   }
 
   /* 체크 버튼 */
   &.check {
     width: 100%;
-    height: 30px;
+    height: 35px;
     font-size: $h5;
   }
 }
@@ -36,16 +52,6 @@
   svg {
     display: block;
     width: 20px;
-  }
-  &.photo {
-    svg {
-      width: 25px;
-    }
-  }
-  &.skills {
-    svg {
-      width: 23px;
-    }
   }
 }
 

@@ -1,14 +1,18 @@
 import React from "react";
 
-const Menus = ({ icons }) => {
+const Menus = ({menuList, type}) => {
   return (
     <div className='menus'>
-      {icons.map(({icon, name}) =>
-        <button key={name} className='btn'>
-          <span className={`icon ${name}`}>{icon(name)}</span>
-        </button>
-      )}
-    </div >
+      {menuList
+        .filter((menu) => type === menu.type)
+        .map((menu) => {
+        return (
+          <button key={menu.idx} className={`btn icon ${menu.name}`}>
+            {menu.name}
+          </button>
+        )
+      })}
+  </div>
   )
 }
 

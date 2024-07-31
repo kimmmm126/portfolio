@@ -29,7 +29,29 @@ const infoTxtList = [
     idx: 3,
     text: 'kimmmm126'
   },
+]
 
+const MenuList = [
+  {
+    idx: 1,
+    name: 'home',
+    type: 'bottom',
+  },
+  {
+    idx: 2,
+    name: 'map',
+    type: 'top',
+  },
+  {
+    idx: 3,
+    name: 'photo',
+    type: 'bottom',
+  },
+  {
+    idx: 8,
+    name: 'like',
+    type: 'bottom',
+  },
 ]
 
 const itemList = [
@@ -55,4 +77,4 @@ const itemList = [
   },
 ]
 
-export { infoList, infoTxtList, itemList } 
+export { infoList, infoTxtList, itemList, MenuList } 
