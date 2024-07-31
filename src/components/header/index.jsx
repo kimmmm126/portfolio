@@ -1,6 +1,7 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
 import Logo from "../../assets/images/logo.svg"
+import Icons from '../../constants/svg.js'
 
 const Header = () => {
   const navigate = useNavigate();
@@ -22,12 +23,13 @@ const Header = () => {
           </nav>
         </div>
         <div className="btnWrap">
-          <button className="btn sm min">
-          </button>
-          <button className="btn sm max">
-          </button>
-          <button className="btn sm close">
-          </button>
+          {Icons.map(({name, icon}) => {
+            return (
+              <button key={name} className="btn sm">
+                <span className={`icon ${name}`}>{icon(name)}</span>
+              </button>
+            )
+          })}
         </div>
       </div>
     </header >

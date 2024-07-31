@@ -24,15 +24,26 @@
       position: absolute;
       top: 50%;
       left: 50%;
+      width: inherit;
+      height: inherit;
       transform: translate(-50%, -50%);
       text-align: center;
     }
 
+    &.home {
+      &::before {
+        background: center / contain url('../assets/images/ico-home.png') no-repeat;
+      }
+    }
+
     &.photo {
       &::before {
-        width: 26px;
-        height: inherit;
         background: center / contain url('../assets/images/ico-photo.png') no-repeat;
+      }
+    }
+    &.like {
+      &::before {
+        background: center / contain url('../assets/images/ico-like.png') no-repeat;
       }
     }
   }
@@ -51,7 +62,9 @@
   vertical-align: middle;
   svg {
     display: block;
-    width: 20px;
+  }
+  &.min {
+    vertical-align: baseline;
   }
 }
 
@@ -187,10 +200,6 @@
     padding: 6px 10px;
 
     .btn {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 0;
       margin-right: 3px;
     }
   }
@@ -368,6 +377,8 @@
 }
 
 .menus {
+  display: flex;
+  align-items: center;
   .btn {
     width: 25%;
     height: 40px;
