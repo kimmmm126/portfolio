@@ -33,8 +33,23 @@ const infoTxtList = [
 
 const MenuList = [
   {
+    idx: 1,
+    name: 'grid',
+    type: 'top',
+  },
+  {
     idx: 2,
+    name: 'menu',
+    type: 'top',
+  },
+  {
+    idx: 3,
     name: 'map',
+    type: 'top',
+  },
+  {
+    idx: 4,
+    name: 'info',
     type: 'top',
   },
   {
