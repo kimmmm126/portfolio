@@ -4,6 +4,14 @@
 @import url('slick-carousel/slick/slick.css');
 @import url('slick-carousel/slick/slick-theme.css');
 
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 /* 공통 hidden */
 .hid {
   display: none !important;
@@ -70,6 +78,9 @@
 /* 공통 디바이더 */
 .divider {
   width: 100%;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #fff;
+  margin: 10px 0;
 }
 
 /* 화살표 */
@@ -112,22 +123,6 @@
   .txt {
     font-size: $h4;
   }
-}
-
-#root {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.wrap {
-  min-width: 360px;
-  width: 480px;
-  min-height: 700px;
-  padding: 4px;
-  text-shadow: 0 0 #222;
-  background-color: $bgColorGray;
-  box-shadow: $boxShadow;
 }
 
 .header {
@@ -205,15 +200,20 @@
 
 }
 
+.modal {
+  min-width: 360px;
+  width: 480px;
+  min-height: 700px;
+  padding: 4px;
+  text-shadow: 0 0 #222;
+  background-color: $bgColorGray;
+  box-shadow: $boxShadow;
+}
+
 .container {
   max-height: 620px;
   overflow-y: auto;
   padding: 10px;
-}
-
-.infoHeader {
-  margin-bottom: 20px;
-
   .title {
     text-align: center;
     font-size: $h3;
@@ -229,7 +229,7 @@
   justify-content: space-between;
 }
 
-.infoProfile {
+.profile {
   position: relative;
   width: $profileImgSize;
   overflow: hidden;
@@ -242,7 +242,7 @@
     padding-bottom: 100%;
   }
 
-  .profile {
+  .profileImg {
     width: auto;
     height: 100%;
 
@@ -354,7 +354,18 @@
     }
 }
 
-.infoTxt {
+.menus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .btn {
+    flex: 1;
+    width: 100%;
+    height: 40px;
+  }
+}
+
+.txtBox {
   flex: 100%;
   margin: 20px 0 0;
 
@@ -373,28 +384,7 @@
   }
 }
 
-.menus {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .btn {
-    flex: 1;
-    width: 100%;
-    height: 40px;
-  }
-}
-
-.infoContents {
-  img {
-    width: 33.3%;
-  }
-}
-
 .contents {
-  position: relative;
-  overflow-y: auto;
-  min-height: 200px;
-  max-height: 200px;
 
   .noContents {
     position: absolute;
@@ -402,10 +392,21 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  &Top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &Box {
+    position: relative;
+    overflow-y: auto;
+    min-height: 225px;
+    max-height: 225px;
+  }
 }
 
 @media (max-width: #{$sm}px) {
-  .wrap {
+  .modal {
     width: 90%;
   }
 }

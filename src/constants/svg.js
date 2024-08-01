@@ -1,9 +1,16 @@
+import { ReactComponent as InstagramIcon } from '../assets/images/logo.svg';
+
 import { ReactComponent as MinIcon } from '../assets/images/ico-min.svg';
 import { ReactComponent as MaxIcon } from '../assets/images/ico-max.svg';
 import { ReactComponent as CloseIcon } from '../assets/images/ico-close.svg';
 
-
 const Icons = [
+  {
+    name: 'instagram',
+    icon: () => {
+      return <InstagramIcon />
+    },
+  },
   {
     name: 'min',
     icon: () => {

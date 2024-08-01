@@ -1,11 +1,13 @@
 import React from "react"
-import Main from '../../components/main'
-import profileImg from '../../assets/images/profile.gif'
+import Modal from '../../components/modal';
+import profileImg from '../../assets/images/profile.gif';
+import Icons from '../../constants/svg.js';
+
 
 
 const Home = () => {
   return (
-    <Main img={profileImg} />
+    <Modal title="Portfolio" img={profileImg} icons={Icons} />
   )
 }
 

@@ -86,10 +86,6 @@ const itemList = [
     id: 4,
     name: '김승민'
   },
-  {
-    id: 5,
-    name: '김승민'
-  },
 ]
 
 export { infoList, infoTxtList, itemList, MenuList } 

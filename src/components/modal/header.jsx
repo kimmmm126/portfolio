@@ -1,17 +1,16 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
-import Logo from "../../assets/images/logo.svg"
 import Icons from '../../constants/svg.js'
 
-const Header = () => {
+const ModalHeader = ({ icons, title }) => {
   const navigate = useNavigate();
   return (
     <header id="header" className="header">
       <div className="headerContanier">
-        <div className="title">
-          <img className="logo" src={Logo} alt="인스타그램" />
-          <h2>portfolio.exe</h2>
-        </div>
+        <h2 className="title">
+          <span className="logo"></span>
+          <span>{title}</span>
+        </h2>
         <div className="gnb">
           <nav>
             <ul>
@@ -23,17 +22,19 @@ const Header = () => {
           </nav>
         </div>
         <div className="btnWrap">
-          {Icons.map(({name, icon}) => {
-            return (
-              <button key={name} className="btn sm">
-                <span className={`icon icon-${name}`}>{icon(name)}</span>
-              </button>
-            )
-          })}
+          <button className="btn sm">
+            <span className="icon icon-min"></span>
+          </button>
+          <button className="btn sm">
+            <span className="icon icon-max"></span>
+          </button>
+          <button className="btn sm">
+            <span className="icon icon-close"></span>
+          </button>
         </div>
       </div>
     </header >
   )
 }
 
-export default Header 
+export default ModalHeader 
