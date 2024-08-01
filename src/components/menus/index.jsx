@@ -7,8 +7,9 @@ const Menus = ({menuList, type}) => {
         .filter((menu) => type === menu.type)
         .map((menu) => {
         return (
-          <button key={menu.idx} className={`btn icon ${menu.name}`}>
-            {menu.name}
+          <button key={menu.idx} className="btn">
+            <span className="hid">{menu.name}</span>
+            <span className={`icon menu icon-${menu.name}`}></span>
           </button>
         )
       })}

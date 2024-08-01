@@ -4,6 +4,11 @@
 @import url('slick-carousel/slick/slick.css');
 @import url('slick-carousel/slick/slick-theme.css');
 
+/* 공통 hidden */
+.hid {
+  display: none !important;
+}
+
 /* 공통 버튼 */
 .btn {
   &:last-child {
@@ -13,39 +18,6 @@
   &.sm {
     width: 20px;
     height: 20px;
-  }
-
-  &.icon {
-    position: relative;
-    text-indent: -999999px;
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: inherit;
-      height: inherit;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-
-    &.home {
-      &::before {
-        background: center / contain url('../assets/images/ico-home.png') no-repeat;
-      }
-    }
-
-    &.photo {
-      &::before {
-        background: center / contain url('../assets/images/ico-photo.png') no-repeat;
-      }
-    }
-    &.like {
-      &::before {
-        background: center / contain url('../assets/images/ico-like.png') no-repeat;
-      }
-    }
   }
 
   /* 체크 버튼 */
@@ -63,8 +35,33 @@
   svg {
     display: block;
   }
-  &.min {
+  &-min {
     vertical-align: baseline;
+  }
+  &.menu {
+    width: inherit;
+    height: inherit;
+  }
+  &-grid {
+    background: center / auto 11px url('../assets/images/ico-grid.png') no-repeat;
+  }
+  &-menu {
+      background: center / auto 11px url('../assets/images/ico-menu.png') no-repeat;
+  }
+  &-map {
+      background: center / auto 18px url('../assets/images/ico-map.png') no-repeat;
+  }
+  &-home {
+      background: center / auto 22px url('../assets/images/ico-home.png') no-repeat;
+  }
+  &-search {
+      background: center / auto 22px url('../assets/images/ico-search.png') no-repeat;
+  }
+  &-photo {
+      background: center / auto 22px url('../assets/images/ico-photo.png') no-repeat;
+  }
+  &-like {
+      background: center / auto 22px url('../assets/images/ico-like.png') no-repeat;
   }
 }
 
@@ -271,7 +268,7 @@
   width: 100% - $profileImgSize;
   padding-left: 30px;
 
-  .infoBoxList {
+  &List {
     width: 100%;
 
     ul {
@@ -378,9 +375,11 @@
 
 .menus {
   display: flex;
+  justify-content: center;
   align-items: center;
   .btn {
-    width: 25%;
+    flex: 1;
+    width: 100%;
     height: 40px;
   }
 }

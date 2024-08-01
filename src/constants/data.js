@@ -49,26 +49,21 @@ const MenuList = [
   },
   {
     idx: 4,
-    name: 'info',
-    type: 'top',
-  },
-  {
-    idx: 5,
     name: 'home',
     type: 'bottom',
   },
   {
     idx: 6,
+    name: 'search',
+    type: 'bottom',
+  },
+  {
+    idx: 5,
     name: 'photo',
     type: 'bottom',
   },
   {
     idx: 7,
-    name: 'search',
-    type: 'bottom',
-  },
-  {
-    idx: 8,
     name: 'like',
     type: 'bottom',
   },

@@ -26,7 +26,7 @@ const Header = () => {
           {Icons.map(({name, icon}) => {
             return (
               <button key={name} className="btn sm">
-                <span className={`icon ${name}`}>{icon(name)}</span>
+                <span className={`icon icon-${name}`}>{icon(name)}</span>
               </button>
             )
           })}
