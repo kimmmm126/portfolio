@@ -38,10 +38,6 @@
   &-min {
     vertical-align: baseline;
   }
-  &.menu {
-    width: inherit;
-    height: inherit;
-  }
   &-grid {
     background: center / auto 11px url('../assets/images/ico-grid.png') no-repeat;
   }
@@ -64,6 +60,13 @@
       background: center / auto 22px url('../assets/images/ico-like.png') no-repeat;
   }
 }
+
+[class*="icon-"] {
+  display: block;
+  width: inherit;
+  height: inherit;
+}
+
 
 /* 공통 디바이더 */
 .divider {
@@ -218,8 +221,6 @@
     font-weight: 300;
   }
 }
-
-
 
 .infoContainer {
   margin: 20px 0;
