@@ -38,6 +38,11 @@
   &-min {
     vertical-align: baseline;
   }
+  &.menu {
+    display: block;
+    width: inherit;
+    height: inherit;
+  }
   &-grid {
     background: center / auto 11px url('../assets/images/ico-grid.png') no-repeat;
   }
@@ -59,12 +64,6 @@
   &-like {
       background: center / auto 22px url('../assets/images/ico-like.png') no-repeat;
   }
-}
-
-[class*="icon-"] {
-  display: block;
-  width: inherit;
-  height: inherit;
 }
 
 
