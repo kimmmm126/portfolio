@@ -26,7 +26,7 @@ const ModalContainer = ({ img }) => {
         <div className="contentsTop">
           <div className="profile">
             {img ? (
-              <img className="profileImg center" src={img} alt="프로필" />
+              <img className="profileImg " src={img} alt="프로필" />
             ) : (
               <div className="avatar" />
             )}

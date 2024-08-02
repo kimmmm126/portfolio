@@ -2,11 +2,13 @@ import React from 'react';
 import ModalHeader from './header.jsx';
 import ModalContainer from './container.jsx';
 
-const Modal = ({ title = '', logo, img }) => {
+const Modal = ({ title = '', logo, img, closeClick }) => {
   return (
     <div className="modal">
-      <ModalHeader title={title} logo={logo} />
-      <ModalContainer img={img} />
+      <div className='modalInner'>
+        <ModalHeader title={title} logo={logo} closeClick={closeClick}/>
+        <ModalContainer img={img} />
+      </div>
     </div>
   );
 };

@@ -1,9 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { MinIcon, MaxIcon, CloseIcon } from '../../constants/svg.js';
 
-const ModalHeader = ({ logo, title }) => {
-  const navigate = useNavigate();
+const ModalHeader = ({ logo, title, closeClick }) => {
   return (
     <div className="header">
       <div className="headerContanier">
@@ -23,7 +21,7 @@ const ModalHeader = ({ logo, title }) => {
                 <MaxIcon className="icon-max" />
               </span>
             </button>
-            <button className="btn btnClose">
+            <button className="btn btnClose" onClick={closeClick}>
               <span className="icon">
                 <CloseIcon className="icon-close" />
               </span>

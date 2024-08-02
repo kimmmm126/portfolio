@@ -10,13 +10,21 @@ const Home = () => {
     setOpenPopup(true);
   };
 
+  const closeClick = () => {
+    setOpenPopup(false);
+  }
+
   return (
-    <>
-      <button onClick={onOpenPopup}>Open Modal</button>
+    <div className='inner'>
+      <div className='icons'>
+        <span onClick={onOpenPopup} className='icon homeIcon'>
+          <InstagramIcon />
+        </span>
+      </div>
       {openPopup && (
-        <Modal title="Portfolio" logo={InstagramIcon} img={profileImg} />
+        <Modal title="Portfolio" logo={InstagramIcon} img={profileImg} closeClick={closeClick} />
       )}
-    </>
+    </div>
   );
 };
 
