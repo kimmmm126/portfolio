@@ -1,34 +1,22 @@
-import { ReactComponent as InstagramIcon } from '../assets/images/logo.svg';
+import { ReactComponent as InstagramSvgIcon } from '../assets/images/logo.svg';
+import { ReactComponent as MinSvgIcon } from '../assets/images/ico-min.svg';
+import { ReactComponent as MaxSvgIcon } from '../assets/images/ico-max.svg';
+import { ReactComponent as CloseSvgIcon } from '../assets/images/ico-close.svg';
 
-import { ReactComponent as MinIcon } from '../assets/images/ico-min.svg';
-import { ReactComponent as MaxIcon } from '../assets/images/ico-max.svg';
-import { ReactComponent as CloseIcon } from '../assets/images/ico-close.svg';
+const InstagramIcon = () => {
+  return <InstagramSvgIcon />;
+};
 
-const Icons = [
-  {
-    name: 'instagram',
-    icon: () => {
-      return <InstagramIcon />
-    },
-  },
-  {
-    name: 'min',
-    icon: () => {
-      return <MinIcon />
-    },
-  },
-  {
-    name: 'max',
-    icon: () => {
-      return <MaxIcon />
-    },
-  },
-  {
-    name: 'close',
-    icon: () => {
-      return <CloseIcon />
-    },
-  },
-]
+const MinIcon = ({ className }) => {
+  return <MinSvgIcon className={className} />;
+};
 
-export default Icons
+const MaxIcon = ({ className }) => {
+  return <MaxSvgIcon className={className} />;
+};
+
+const CloseIcon = ({ className }) => {
+  return <CloseSvgIcon className={className} />;
+};
+
+export { InstagramIcon, MinIcon, MaxIcon, CloseIcon };

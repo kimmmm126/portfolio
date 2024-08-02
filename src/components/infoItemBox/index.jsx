@@ -1,8 +1,7 @@
-import React from "react";
-import Slider from "react-slick";
+import React from 'react';
+import Slider from 'react-slick';
 
 const InfoItemBox = ({ itemList }) => {
-
   const setting = {
     dots: false,
     infinite: false,
@@ -13,25 +12,24 @@ const InfoItemBox = ({ itemList }) => {
 
   return (
     <div className="infoItem">
-      {itemList ?
+      {itemList ? (
         <Slider {...setting}>
-          {
-            itemList.map((item) => {
-              return (
-                <div key={item.id} className="itemBox">
-                  <div className="item" />
-                  <div className="txt">
-                    <p className="tit">{item.name}</p>
-                    <p className="desc">test</p>
-                  </div>
-                  <button className="btn check">Check</button>
+          {itemList.map((item) => {
+            return (
+              <div key={item.id} className="itemBox">
+                <div className="item" />
+                <div className="txt">
+                  <p className="tit">{item.name}</p>
+                  <p className="desc">test</p>
                 </div>
-              )
-            })
-          }
-        </Slider> : null}
+                <button className="btn btnCheck">Check</button>
+              </div>
+            );
+          })}
+        </Slider>
+      ) : null}
     </div>
-  )
-}
+  );
+};
 
 export default InfoItemBox;

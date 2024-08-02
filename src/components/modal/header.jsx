@@ -1,40 +1,58 @@
-import React from "react"
-import { useNavigate } from "react-router-dom"
-import Icons from '../../constants/svg.js'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { MinIcon, MaxIcon, CloseIcon } from '../../constants/svg.js';
 
-const ModalHeader = ({ icons, title }) => {
+const ModalHeader = ({ logo, title }) => {
   const navigate = useNavigate();
   return (
-    <header id="header" className="header">
+    <div className="header">
       <div className="headerContanier">
-        <h2 className="title">
-          <span className="logo"></span>
-          <span>{title}</span>
-        </h2>
-        <div className="gnb">
-          <nav>
-            <ul>
-              <li onClick={() => navigate('/')}><span>Home</span></li>
-              <li onClick={() => navigate('/file')}><span>File</span></li>
-              <li onClick={() => navigate('/view')}><span>View</span></li>
-              <li onClick={() => navigate('/contact')}><span>Contact</span></li>
-            </ul>
-          </nav>
+        <div className="headerTop">
+          <h2 className="title">
+            <span className="logo">{logo()}</span>
+            <span>{title}</span>
+          </h2>
+          <div className="btnWrap">
+            <button className="btn btnMin">
+              <span className="icon">
+                <MinIcon className="icon-min" />
+              </span>
+            </button>
+            <button className="btn btnMax">
+              <span className="icon">
+                <MaxIcon className="icon-max" />
+              </span>
+            </button>
+            <button className="btn btnClose">
+              <span className="icon">
+                <CloseIcon className="icon-close" />
+              </span>
+            </button>
+          </div>
         </div>
-        <div className="btnWrap">
-          <button className="btn sm">
-            <span className="icon icon-min"></span>
-          </button>
-          <button className="btn sm">
-            <span className="icon icon-max"></span>
-          </button>
-          <button className="btn sm">
-            <span className="icon icon-close"></span>
-          </button>
+        <div className="headerBottom">
+          <div className="gnb">
+            <nav>
+              <ul>
+                <li>
+                  <span>Home</span>
+                </li>
+                <li>
+                  <span>File</span>
+                </li>
+                <li>
+                  <span>View</span>
+                </li>
+                <li>
+                  <span>Contact</span>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
-    </header >
-  )
-}
+    </div>
+  );
+};
 
-export default ModalHeader 
+export default ModalHeader;

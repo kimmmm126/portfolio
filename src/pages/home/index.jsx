@@ -1,14 +1,10 @@
-import React from "react"
+import React from 'react';
 import Modal from '../../components/modal';
 import profileImg from '../../assets/images/profile.gif';
-import Icons from '../../constants/svg.js';
-
-
+import { InstagramIcon } from '../../constants/svg.js';
 
 const Home = () => {
-  return (
-    <Modal title="Portfolio" img={profileImg} icons={Icons} />
-  )
-}
+  return <Modal title="Portfolio" logo={InstagramIcon} img={profileImg} />;
+};
 
 export default Home;

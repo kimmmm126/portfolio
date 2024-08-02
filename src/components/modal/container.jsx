@@ -1,16 +1,20 @@
-import React, { useState } from "react";
-import { infoList, infoTxtList, itemList, MenuList } from '../../constants/data.js'
-import Menus from "../../components/menus";
+import React, { useState } from 'react';
+import {
+  infoList,
+  infoTxtList,
+  itemList,
+  MenuList,
+} from '../../constants/data.js';
+import Menus from '../../components/menus';
 import InfoItemBox from '../../components/infoItemBox';
 import Contents from '../../components/contents';
 
-const ModalContainer = ({img}) => {
-
+const ModalContainer = ({ img }) => {
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = () => {
     setIsActive(!isActive);
-  }
+  };
 
   return (
     <div className="container">
@@ -21,38 +25,47 @@ const ModalContainer = ({img}) => {
         <hr className="divider" />
         <div className="contentsTop">
           <div className="profile">
-            {img
-              ? <img className="profileImg center" src={img} alt="프로필" />
-              : <div className="avatar" />
-            }
+            {img ? (
+              <img className="profileImg center" src={img} alt="프로필" />
+            ) : (
+              <div className="avatar" />
+            )}
           </div>
           <div className="infoBox">
             <div className="infoBoxList">
               <ul>
-                {infoList.map(item => {
+                {infoList.map((item) => {
                   const count = Math.floor(item.count / 1000);
                   return (
                     <li key={item.idx}>
                       <em className="tit">{item.name}</em>
                       <span className="count">
-                        {item.count >= 1000 ? count.toLocaleString() + 'k' : item.count}
+                        {item.count >= 1000
+                          ? count.toLocaleString() + 'k'
+                          : item.count}
                       </span>
                     </li>
-                  )
+                  );
                 })}
               </ul>
             </div>
             <div className="btnWrap">
-              <button className="btn follow">Follow +</button>
-              <button onClick={handleClick} className={"btn arrow" + (isActive ? ' up' : ' down')}>Drop Down</button>
+              <button className="btn btnFollow">
+                <span>Follow +</span>
+              </button>
+              <button onClick={handleClick} className="btn btnToggle">
+                <span className="hid">Drop Down</span>
+                <i className={`icon-arrow${isActive ? '-up' : '-down'}`}></i>
+              </button>
             </div>
           </div>
-          {isActive &&
-            <InfoItemBox itemList={itemList} />
-          }
+          {isActive && <InfoItemBox itemList={itemList} />}
           <div className="txtBox">
-            {infoTxtList.map(item => (
-              <p className={'txt' + (item.idx === 1 ? ' bold' : '')} key={item.idx}>
+            {infoTxtList.map((item) => (
+              <p
+                className={'txt' + (item.idx === 1 ? ' bold' : '')}
+                key={item.idx}
+              >
                 {item.text}
               </p>
             ))}
@@ -70,7 +83,7 @@ const ModalContainer = ({img}) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ModalContainer;

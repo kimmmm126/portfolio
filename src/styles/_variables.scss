@@ -7,26 +7,27 @@ $iconSize: 15px;
 $profileImgSize: 30%;
 
 /* font sizes */
-$h1 : 1.4em;
-$h2 : 1.2em;
-$h3 : 1em;
-$h4 : 0.9em;
-$h5 : 0.8em;
-$h6 : 0.7em;
+$h1: 1.4em;
+$h2: 1.2em;
+$h3: 1em;
+$h4: 0.9em;
+$h5: 0.8em;
+$h6: 0.7em;
 
 /* colors */
-$windowBgColor : #00017f;
+$windowBgColor: #00017f;
 $bgColorGray: silver;
 $bgColorGreen: #008080;
 
 /* font colors */
-$colorWhite : #fff;
+$colorWhite: #fff;
 
 /* box shadows */
-$boxShadow : inset -1px -1px #0a0a0a,
-inset 1px 1px #fff,
-inset -2px -2px grey,
-inset 2px 2px #dfdfdf;
+$boxShadow:
+  inset -1px -1px #0a0a0a,
+  inset 1px 1px #fff,
+  inset -2px -2px grey,
+  inset 2px 2px #dfdfdf;
 
 /* break points */
 $xs: 0;
