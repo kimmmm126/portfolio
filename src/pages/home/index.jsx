@@ -17,8 +17,8 @@ const Home = () => {
   return (
     <div className='inner'>
       <div className='icons'>
-        <span onClick={onOpenPopup} className='icon homeIcon'>
-          <InstagramIcon />
+        <span onClick={onOpenPopup} className='icon iconHome'>
+          <InstagramIcon width={40} height={40} />
         </span>
       </div>
       {openPopup && (
