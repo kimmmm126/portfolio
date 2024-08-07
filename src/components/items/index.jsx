@@ -1,7 +1,8 @@
-import React from "react";
-import Slider from "react-slick";
+import React from 'react';
+import Slider from 'react-slick';
+import ModalHeader from '../modal/header';
 
-const Items = ({ itemList }) => {
+const Items = ({ itemList, closeClick }) => {
   const setting = {
     dots: false,
     infinite: false,
@@ -11,18 +12,20 @@ const Items = ({ itemList }) => {
   };
 
   return (
-    <div className="infoItem">
+    <div className="items">
       {itemList ? (
         <Slider {...setting}>
-          {itemList.map((item) => {
+          {itemList.map(({ idx, img, name, desc }) => {
             return (
-              <div key={item.id} className="itemBox">
-                <div className="item" />
-                <div className="txt">
-                  <p className="tit">{item.name}</p>
-                  <p className="desc">test</p>
-                </div>
-                <button className="btn btnCheck">Check</button>
+              <div key={idx} className="item">
+                <ModalHeader closeClick={closeClick}>
+                  <div className="img">{img}</div>
+                  <div className="txt">
+                    <p className="tit">{name}</p>
+                    <p className="desc">{desc}</p>
+                  </div>
+                  <button className="btn btnCheck">Check</button>
+                </ModalHeader>
               </div>
             );
           })}
