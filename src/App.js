@@ -1,15 +1,11 @@
-import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/home';
-import File from './pages/file';
-import './styles/_styles.scss';
+import React from "react";
+import Home from "./pages/home";
+import "./styles/_styles.scss";
 
 function App() {
   return (
     <div className="wrap">
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <Home />
-      </BrowserRouter>
+      <Home />
     </div>
   );
 }

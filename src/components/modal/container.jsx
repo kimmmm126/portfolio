@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   infoList,
   infoTxtList,
   itemList,
   MenuList,
-} from '../../constants/data.js';
-import Menus from '../../components/menus';
-import InfoItemBox from '../../components/infoItemBox';
-import Contents from '../../components/contents';
+} from "../../constants/data.js";
+import Menus from "../../components/menus";
+import Items from "../../components/items";
+import Contents from "../../components/contents";
 
 const ModalContainer = ({ img }) => {
   const [isActive, setIsActive] = useState(false);
@@ -41,7 +41,7 @@ const ModalContainer = ({ img }) => {
                       <em className="tit">{item.name}</em>
                       <span className="count">
                         {item.count >= 1000
-                          ? count.toLocaleString() + 'k'
+                          ? count.toLocaleString() + "k"
                           : item.count}
                       </span>
                     </li>
@@ -55,15 +55,15 @@ const ModalContainer = ({ img }) => {
               </button>
               <button onClick={handleClick} className="btn btnToggle">
                 <span className="hid">Drop Down</span>
-                <i className={`icon-arrow${isActive ? '-up' : '-down'}`}></i>
+                <i className={`icon-arrow${isActive ? "-up" : "-down"}`}></i>
               </button>
             </div>
           </div>
-          {isActive && <InfoItemBox itemList={itemList} />}
+          {isActive && <Items itemList={itemList} />}
           <div className="txtBox">
             {infoTxtList.map((item) => (
               <p
-                className={'txt' + (item.idx === 1 ? ' bold' : '')}
+                className={"txt" + (item.idx === 1 ? " bold" : "")}
                 key={item.idx}
               >
                 {item.text}

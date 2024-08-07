@@ -57,7 +57,11 @@ button {
   color: transparent;
   text-shadow: 0 0 #222;
   background-color: $bgColorGray;
-  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+  box-shadow:
+    inset -1px -1px #0a0a0a,
+    inset 1px 1px #fff,
+    inset -2px -2px grey,
+    inset 2px 2px #dfdfdf;
   border-radius: 0;
   padding: 0;
   &:focus {
@@ -66,7 +70,11 @@ button {
   }
 
   &:not(:disabled):active {
-    box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
+    box-shadow:
+      inset -1px -1px #fff,
+      inset 1px 1px #0a0a0a,
+      inset -2px -2px #dfdfdf,
+      inset 2px 2px grey;
     text-shadow: 1px 1px #222;
   }
 }
@@ -83,18 +91,24 @@ button {
   width: 16px;
   height: 16px;
   background: silver;
-  box-shadow: inset 1px 1px #dfdfdf, inset -1px -1px gray;
+  box-shadow:
+    inset 1px 1px #dfdfdf,
+    inset -1px -1px gray;
   border: 1px solid;
   border-color: silver #000 #000 silver;
 }
 
 ::-webkit-scrollbar-track {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='2' height='2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1 0H0v1h1v1h1V1H1V0z' fill='silver'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 0H1v1H0v1h1V1h1V0z' fill='%23fff'/%3E%3C/svg%3E")
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='2' height='2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1 0H0v1h1v1h1V1H1V0z' fill='silver'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 0H1v1H0v1h1V1h1V0z' fill='%23fff'/%3E%3C/svg%3E");
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: silver;
-  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+  box-shadow:
+    inset -1px -1px #0a0a0a,
+    inset 1px 1px #fff,
+    inset -2px -2px grey,
+    inset 2px 2px #dfdfdf;
 }
 
 ::-webkit-scrollbar-button {

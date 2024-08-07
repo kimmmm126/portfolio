@@ -1,5 +1,5 @@
-import React from 'react';
-import { MinIcon, MaxIcon, CloseIcon } from '../../constants/svg.js';
+import React from "react";
+import { MinIcon, MaxIcon, CloseIcon } from "../../constants/svg.js";
 
 const ModalHeader = ({ Logo, title, closeClick }) => {
   return (
@@ -7,7 +7,9 @@ const ModalHeader = ({ Logo, title, closeClick }) => {
       <div className="headerContanier">
         <div className="headerTop">
           <h2 className="title">
-            <span className="logo"><Logo width={16} height={16} /></span>
+            <span className="logo">
+              <Logo width={16} height={16} />
+            </span>
             <span>{title}</span>
           </h2>
           <div className="btnWrap">

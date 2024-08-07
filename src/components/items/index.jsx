@@ -1,7 +1,7 @@
-import React from 'react';
-import Slider from 'react-slick';
+import React from "react";
+import Slider from "react-slick";
 
-const InfoItemBox = ({ itemList }) => {
+const Items = ({ itemList }) => {
   const setting = {
     dots: false,
     infinite: false,
@@ -32,4 +32,4 @@ const InfoItemBox = ({ itemList }) => {
   );
 };
 
-export default InfoItemBox;
+export default Items;

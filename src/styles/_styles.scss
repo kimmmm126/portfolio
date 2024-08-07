@@ -1,9 +1,8 @@
-@import '_variables.scss';
-@import '_reset.scss';
-@import '_font.scss';
-@import url('slick-carousel/slick/slick.css');
-@import url('slick-carousel/slick/slick-theme.css');
-
+@import "_variables.scss";
+@import "_reset.scss";
+@import "_font.scss";
+@import url("slick-carousel/slick/slick.css");
+@import url("slick-carousel/slick/slick-theme.css");
 
 /* 공통 hidden */
 .hid {
@@ -23,30 +22,30 @@
     height: inherit;
   }
   &-grid {
-    background: center / auto 11px url('../assets/images/ico-grid.png')
+    background: center / auto 11px url("../assets/images/ico-grid.png")
       no-repeat;
   }
   &-menu {
-    background: center / auto 11px url('../assets/images/ico-menu.png')
+    background: center / auto 11px url("../assets/images/ico-menu.png")
       no-repeat;
   }
   &-map {
-    background: center / auto 18px url('../assets/images/ico-map.png') no-repeat;
+    background: center / auto 18px url("../assets/images/ico-map.png") no-repeat;
   }
   &-home {
-    background: center / auto 22px url('../assets/images/ico-home.png')
+    background: center / auto 22px url("../assets/images/ico-home.png")
       no-repeat;
   }
   &-search {
-    background: center / auto 22px url('../assets/images/ico-search.png')
+    background: center / auto 22px url("../assets/images/ico-search.png")
       no-repeat;
   }
   &-photo {
-    background: center / auto 22px url('../assets/images/ico-photo.png')
+    background: center / auto 22px url("../assets/images/ico-photo.png")
       no-repeat;
   }
   &-like {
-    background: center / auto 22px url('../assets/images/ico-like.png')
+    background: center / auto 22px url("../assets/images/ico-like.png")
       no-repeat;
   }
 }
@@ -64,7 +63,7 @@
   &-down {
     position: relative;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       left: 50%;
@@ -78,7 +77,7 @@
   &-up {
     position: relative;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       left: 50%;
@@ -146,7 +145,7 @@
         span {
           display: inline-block;
           &::after {
-            content: '';
+            content: "";
             display: block;
             color: inherit;
             margin: 1px 0;
@@ -242,7 +241,7 @@
     }
   }
   &:after {
-    content: '';
+    content: "";
     display: block;
     padding-bottom: 100%;
   }
@@ -254,7 +253,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: center / cover url('../assets/images/profile.gif') no-repeat;
+  background: center / cover url("../assets/images/profile.gif") no-repeat;
 }
 
 .infoBox {
@@ -306,7 +305,7 @@
       border-radius: 100%;
 
       &::after {
-        content: '';
+        content: "";
         display: block;
         padding-bottom: 100%;
       }
