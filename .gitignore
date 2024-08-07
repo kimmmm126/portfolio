@@ -105,3 +105,4 @@ dist
 
 # ignore all files in the build/ directory
 build/
+node_modules
