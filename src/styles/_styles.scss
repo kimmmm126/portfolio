@@ -62,23 +62,11 @@
   }
 }
 
-/* 공통 디바이더 */
-.divider {
-  width: 100%;
-  border-top: 1px solid #222;
-  border-bottom: 1px solid #fff;
-  margin: 10px 0;
-}
-
 /* 공통 내용 없음 영역 */
 .noContents {
-  position: relative;
-  min-height: 225px;
+  padding: 10% 0;
   .txt {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    text-align: center;
     font-size: $h4;
   }
 }
@@ -141,17 +129,17 @@
     font-size: 0.9em;
     margin-right: 10px;
   }
-  ul li span {
+  li span {
     display: inline-block;
-    &::after {
-      content: '';
-      display: block;
-      color: inherit;
-      margin: 1px 0;
-      width: 0.7em;
-      height: 1px;
-      background-color: #000;
-    }
+  }
+  li span::after {
+    content: '';
+    display: block;
+    color: inherit;
+    margin: 1px 0;
+    width: 0.7em;
+    height: 1px;
+    background-color: #000;
   }
 }
 
@@ -161,9 +149,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 480px;
-  min-width: 360px;
-  max-height: 700px;
-  overflow-y: auto;
   padding: 4px;
   text-shadow: 0 0 #222;
   background-color: $bg-color-gray;
@@ -210,17 +195,19 @@
 }
 
 .modalContainer {
-  flex: auto;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 10px;
+  max-height: 600px;
+  overflow-y: auto;
   .title {
+    display: block;
     text-align: center;
-    font-size: $h2;
-    font-weight: 300;
-    margin: 15px auto;
+    margin: 10px 0;
     h2 {
-      font-size: inherit;
-      font-weight: inherit;
+      font-size: $h2;
+      font-weight: 300;
     }
   }
 }
@@ -300,17 +287,17 @@
 
 .items {
   width: 100%;
-  margin-top: 20px;
+  margin: 10px 0;
   .item {
-    background-color: $bg-color-gray;
-  }
-  .txt {
-    text-align: center;
-    p {
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
+    .modalHeader {
+      padding: 0 2px;
     }
+  }
+  p {
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   .tit {
     font-size: $h4;
@@ -321,16 +308,26 @@
     font-size: $h4;
     margin: 5px 0;
   }
-  .no-img {
+
+  .thumb {
+    position: relative;
     width: 80%;
-    margin: 0 auto;
-    background-color: $bg-color-black;
+    margin: 10% auto;
     border-radius: 100%;
-    &::after {
-      content: '';
+    overflow: hidden;
+    img {
       display: block;
-      padding-bottom: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
     }
+  }
+  .thumb::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
   }
 }
 
@@ -345,10 +342,8 @@
   width: 100%;
   height: 40px;
 }
-
 .txtBox {
-  flex: 100%;
-  margin: 20px 0 0;
+  margin: 10px 1px;
 }
 
 .txtBox .txt {
@@ -366,6 +361,13 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+
+.contentsBottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .contentsBox {
