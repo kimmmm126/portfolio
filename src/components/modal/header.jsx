@@ -4,12 +4,14 @@ import { MinIcon, MaxIcon, CloseIcon } from '../../constants/svg.js';
 const ModalHeader = ({ Logo = () => null, title = '', closeClick = () => {} }) => {
   return (
     <div className="modalHeader">
-      <h2 className="title">
-        <span className="logo">
-          <Logo width={16} height={16} />
-        </span>
-        <span>{title}</span>
-      </h2>
+      {Logo && title && (
+        <h2 className="title">
+          <span className="logo">
+            <Logo width={16} height={16} />
+          </span>
+          <span>{title}</span>
+        </h2>
+      )}
       <div className="btnWrap">
         <button className="btn btnMin">
           <span className="icon">
