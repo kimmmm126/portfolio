@@ -64,7 +64,10 @@
 
 /* 공통 내용 없음 영역 */
 .noContents {
+<<<<<<< HEAD
   padding: 10% 0;
+=======
+>>>>>>> 59d7f72092d2bd0572eae329fb3922ec8759bc40
   .txt {
     text-align: center;
     font-size: $h4;
@@ -149,6 +152,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 480px;
+<<<<<<< HEAD
+=======
+  min-width: 360px;
+  height: 80%;
+>>>>>>> 59d7f72092d2bd0572eae329fb3922ec8759bc40
   padding: 4px;
   text-shadow: 0 0 #222;
   background-color: $bg-color-gray;
@@ -288,10 +296,18 @@
 .items {
   width: 100%;
   margin: 10px 0;
+<<<<<<< HEAD
   .item {
     .modalHeader {
       padding: 0 2px;
     }
+=======
+  p {
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+>>>>>>> 59d7f72092d2bd0572eae329fb3922ec8759bc40
   }
   p {
     text-align: center;
@@ -343,7 +359,11 @@
   height: 40px;
 }
 .txtBox {
+<<<<<<< HEAD
   margin: 10px 1px;
+=======
+  margin: 10px 0;
+>>>>>>> 59d7f72092d2bd0572eae329fb3922ec8759bc40
 }
 
 .txtBox .txt {
@@ -355,6 +375,10 @@
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.contents {
+  height: 55%;
 }
 
 .contentsTop {
