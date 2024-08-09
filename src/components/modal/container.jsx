@@ -17,7 +17,7 @@ const ModalContainer = ({ img }) => {
   };
 
   return (
-    <div className="container">
+    <div className="modalContainer">
       <div className="title">
         <h2>Porfolio</h2>
       </div>

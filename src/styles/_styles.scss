@@ -109,12 +109,12 @@
     justify-content: flex-end;
     align-items: center;
     padding: 6px 10px;
-    background-color: $windowBgColor;
+    background-color: $bg-color-primary;
     .title {
       display: flex;
       align-items: center;
       font-size: $h4;
-      color: $colorWhite;
+      color: $color-white;
       flex: 1;
     }
     .logo {
@@ -190,37 +190,40 @@
 }
 
 .modal {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 360px;
   width: 480px;
-  min-height: 700px;
+  min-width: 360px;
   padding: 4px;
   text-shadow: 0 0 #222;
-  background-color: $bgColorGray;
+  background-color: $bg-color-gray;
   box-shadow: $boxShadow;
-}
-
-.container {
-  max-height: 620px;
-  overflow-y: auto;
-  padding: 10px;
-  .title {
-    text-align: center;
-    font-size: $h2;
-    font-weight: 300;
-    h2 {
-      font-size: inherit;
-      font-weight: inherit;
+  &Header {
+    flex: 32px;
+  }
+  &Container {
+    flex: auto;
+    overflow-y: auto;
+    padding: 10px;
+    .title {
+      text-align: center;
+      font-size: $h2;
+      font-weight: 300;
+      h2 {
+        font-size: inherit;
+        font-weight: inherit;
+      }
     }
   }
 }
 
 .profile {
   position: relative;
-  width: $profileImgSize;
+  width: 30%;
   overflow: hidden;
   background-color: #000;
   border-radius: 100px;
@@ -251,7 +254,7 @@
 }
 
 .infoBox {
-  width: 100% - $profileImgSize;
+  width: calc(100% - 30%);
   padding-left: 30px;
 
   &List {
@@ -282,7 +285,12 @@
     display: flex;
     align-items: center;
     padding-top: 10px;
-    gap: 10px;
+    .btn {
+      margin: 10px;
+      &:last-child {
+        margin: 0;
+      }
+    }
   }
 }
 
@@ -290,11 +298,11 @@
   width: 100%;
   margin-top: 20px;
   .item {
-    background-color: $bgColorGray;
+    background-color: $bg-color-gray;
     .no-img {
       width: 80%;
       margin: 0 auto;
-      background-color: $bgColorBlacK;
+      background-color: $bg-color-black;
       border-radius: 100%;
       &::after {
         content: '';

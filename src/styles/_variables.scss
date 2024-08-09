@@ -1,11 +1,3 @@
-/* view sizes */
-$logoWidth: 20px;
-$logoHeight: 20px;
-$iconSize: 15px;
-
-/* image sizes */
-$profileImgSize: 30%;
-
 /* font sizes */
 $h1: 1.4em;
 $h2: 1.2em;
@@ -15,20 +7,26 @@ $h5: 0.8em;
 $h6: 0.7em;
 
 /* colors */
-$windowBgColor: #00017f;
-$bgColorGray: silver;
-$bgColorGreen: #008080;
-$bgColorBlacK: #000;
+$color-white: #fff;
+$color-gray: #c0c0c0;
+$color-light-gray: #dfdfdf;
+$color-dark-gray: #0a0a0a;
+$color-black: #000;
+$color-primary: #00017f;
+$color-secondary: #008080;
 
-/* font colors */
-$colorWhite: #fff;
+/* bg colors */
+$bg-color-primary: $color-primary;
+$bg-color-secondary: $color-secondary;
+$bg-color-gray: $color-gray;
+$bg-color-black: $color-black;
 
 /* box shadows */
 $boxShadow:
-  inset -1px -1px #0a0a0a,
-  inset 1px 1px #fff,
-  inset -2px -2px grey,
-  inset 2px 2px #dfdfdf;
+  inset -1px -1px $color-dark-gray,
+  inset 1px 1px $color-white,
+  inset -2px -2px $color-gray,
+  inset 2px 2px $color-light-gray;
 
 /* break points */
 $xs: 0;

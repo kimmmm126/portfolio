@@ -5,10 +5,8 @@ import ModalContainer from "./container.jsx";
 const Modal = ({ title = "", logo, img, closeClick }) => {
   return (
     <div className="modal">
-      <div className="modalInner">
         <ModalHeader title={title} Logo={logo} closeClick={closeClick} />
         <ModalContainer img={img} />
-      </div>
     </div>
   );
 };
