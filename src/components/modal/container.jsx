@@ -22,7 +22,6 @@ const ModalContainer = ({ img }) => {
         <h2>Porfolio</h2>
       </div>
       <div className="contents">
-        <hr className="divider" />
         <div className="contentsTop">
           <div className="profile">
             {img ? <img className="profileImg " src={img} alt="프로필" /> : <div className="avatar" />}
@@ -60,7 +59,6 @@ const ModalContainer = ({ img }) => {
             ))}
           </div>
         </div>
-        <hr className="divider" />
         <div className="contentsBottom">
           <div className="topMenu">
             <Menus menuList={MenuList} type="top" />
