@@ -1,12 +1,12 @@
-import React from "react";
-import ModalHeader from "./header.jsx";
-import ModalContainer from "./container.jsx";
+import React from 'react';
+import ModalHeader from './header.jsx';
+import ModalContainer from './container.jsx';
 
-const Modal = ({ title = "", logo, img, closeClick }) => {
+const Modal = ({ title = '', logo, img, closeClick }) => {
   return (
     <div className="modal">
-        <ModalHeader title={title} Logo={logo} closeClick={closeClick} />
-        <ModalContainer img={img} />
+      <ModalHeader title={title} Logo={logo} closeClick={closeClick} />
+      <ModalContainer img={img} />
     </div>
   );
 };
