@@ -9,6 +9,15 @@
   display: none !important;
 }
 
+/* 공통 divider */
+.divider {
+  display: block;
+  width: 100%;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid $color-white;
+  margin: 10px auto;
+}
+
 /* 공통 아이콘 */
 .icon {
   display: inline-block;
@@ -64,7 +73,7 @@
 
 /* 공통 내용 없음 영역 */
 .noContents {
-  padding: 10% 0;
+  padding: 100px 0;
   .txt {
     text-align: center;
     font-size: $h4;
@@ -195,16 +204,13 @@
 }
 
 .modalContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   padding: 10px;
   max-height: 600px;
   overflow-y: auto;
   .title {
     display: block;
     text-align: center;
-    margin: 10px 0;
+    margin: 20px auto;
     h2 {
       font-size: $h2;
       font-weight: 300;
@@ -222,11 +228,11 @@
     width: auto;
     height: 100%;
     position: absolute;
-    &.center {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+  }
+  .profileImg.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   &:after {
     content: '';
@@ -343,9 +349,9 @@
   height: 40px;
 }
 .txtBox {
+  flex: 1;
   margin: 10px 1px;
 }
-
 .txtBox .txt {
   font-size: $h4;
   margin-bottom: 10px;
@@ -355,10 +361,6 @@
   &:last-child {
     margin-bottom: 0;
   }
-}
-
-.contents {
-  height: 55%;
 }
 
 .contentsTop {
