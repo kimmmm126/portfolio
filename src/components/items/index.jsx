@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
 import ModalHeader from '../modal/header';
 
-const Items = ({ itemList, closeClick }) => {
+const Items = ({ itemList }) => {
   const setting = {
     dots: false,
     arrows: false,
@@ -16,7 +16,7 @@ const Items = ({ itemList, closeClick }) => {
           {itemList.map(({ idx, img, name, desc }) => {
             return (
               <div key={idx} className="item">
-                <ModalHeader key={idx} closeClick={closeClick} />
+                <ModalHeader key={idx} />
                 <div className="thumb">
                   {img ? (
                     <img src={img} alt={name} />

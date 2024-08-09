@@ -247,7 +247,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: center / cover url('../assets/images/profile.gif') no-repeat;
 }
 
 .infoBox {
@@ -258,7 +257,7 @@
     align-items: center;
     padding-top: 10px;
     .btn {
-      margin: 10px;
+      margin: 0 5px;
     }
     .btn:last-child {
       margin: 0;

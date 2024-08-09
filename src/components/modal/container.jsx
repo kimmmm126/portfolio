@@ -6,14 +6,9 @@ import Contents from '../../components/contents';
 
 const ModalContainer = ({ img }) => {
   const [isActive, setIsActive] = useState(false);
-  const [open, setOpen] = useState(false);
 
   const handleClick = () => {
     setIsActive(!isActive);
-  };
-
-  const closeClick = () => {
-    setOpen(false);
   };
 
   return (
@@ -51,7 +46,7 @@ const ModalContainer = ({ img }) => {
               </button>
             </div>
           </div>
-          {isActive && <Items itemList={itemList} closeClick={closeClick} />}
+          {isActive && <Items itemList={itemList} />}
           <div className="txtBox">
             {infoTxtList.map(item => (
               <p className={'txt' + (item.idx === 1 ? ' bold' : '')} key={item.idx}>
